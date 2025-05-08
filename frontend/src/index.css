@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles below */
+
+a.active hr {
+  display: block;
+}
+
+#root {
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+::-webkit-scrollbar{
+display: none;
+}
+
+
+/* Mobile active state styles */
+@media (max-width: 640px) {
+  .nav-link.active {
+    background-color: #2a2828;
+    color: white;
+  }
+  
+  .nav-link.active p {
+    color: white;
+  }
+  
+  .nav-link.active hr {
+    display: none;
+  }
+}

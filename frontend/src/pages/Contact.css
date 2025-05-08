@@ -1,0 +1,142 @@
+.contact-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 4rem auto 0 auto;
+  padding: 2rem 1rem 4rem 1rem;
+  background: transparent;
+}
+
+.contact-img-col {
+  flex: 1.1;
+  min-width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 0;
+  object-fit: cover;
+  background: #fff;
+}
+
+.contact-content-col {
+  flex: 1.5;
+  min-width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  letter-spacing: 1px;
+}
+
+.contact-title-gray {
+  color: #888;
+  font-weight: 400;
+}
+
+.contact-title-black {
+  color: #222;
+  font-weight: 700;
+}
+
+.contact-title-line {
+  flex: 1;
+  height: 2.5px;
+  background: #222;
+  display: inline-block;
+  border-radius: 0;
+  margin-left: 1rem;
+}
+
+.contact-info-block {
+  margin-bottom: 2.5rem;
+}
+
+.contact-info-title {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+.contact-info-address, .contact-info-details {
+  color: #444;
+  font-size: 1.08rem;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  margin-bottom: 0.7rem;
+}
+
+.contact-careers-block {
+  margin-top: 2.5rem;
+}
+
+.contact-careers-title {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+.contact-careers-desc {
+  color: #444;
+  font-size: 1.08rem;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.contact-jobs-btn {
+  background: #222;
+  color: #fff;
+  border: 1.5px solid #222;
+  border-radius: 0;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 0.9rem 2.2rem;
+  cursor: pointer;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-jobs-btn:hover {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #222;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 1.5rem 0.5rem 3rem 0.5rem;
+  }
+  .contact-img-col, .contact-content-col {
+    min-width: 0;
+    width: 100%;
+  }
+  .contact-img {
+    max-width: 100%;
+  }
+  .contact-content-col {
+    padding-top: 0;
+  }
+} 

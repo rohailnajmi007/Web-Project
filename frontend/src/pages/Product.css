@@ -1,0 +1,174 @@
+.product-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 80px auto 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.product-images {
+  display: flex;
+  gap: 1rem;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail.active {
+  border-color: #ff6b00;
+}
+
+.main-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff6b00;
+  margin: 1rem 0;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.size-selector {
+  margin: 2rem 0;
+}
+
+.size-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.size-button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.size-button.active {
+  border-color: #ff6b00;
+  background-color: #fff;
+}
+
+.add-to-cart {
+  background-color: #000;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #333;
+}
+
+.product-features {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd;
+}
+
+.feature-item {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  margin-top: 3rem;
+}
+
+.description-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  border-bottom-color: #ff6b00;
+}
+
+.description-content {
+  padding: 2rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-images {
+    flex-direction: column-reverse;
+  }
+
+  .thumbnail-container {
+    flex-direction: row;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+} 

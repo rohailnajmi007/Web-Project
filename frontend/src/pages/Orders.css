@@ -1,0 +1,170 @@
+.orders-container {
+  max-width: 1200px;
+  margin: 7rem auto 0 auto;
+  padding: 0 1rem 3rem 1rem;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+.orders-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 2.5rem;
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  letter-spacing: 1px;
+}
+
+.orders-title-bold {
+  font-weight: 700;
+  color: #222;
+}
+
+.orders-divider {
+  flex: 1;
+  height: 2.5px;
+  background: #ddd;
+  display: inline-block;
+  border-radius: 0;
+  margin-left: 1rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid #eee;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 1.5rem 2rem;
+  gap: 2rem;
+  min-height: 120px;
+}
+
+.order-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #fafbfc;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.order-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.order-name {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+
+.order-details {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.08rem;
+  color: #444;
+  align-items: center;
+}
+
+.order-price {
+  font-weight: 700;
+  color: #222;
+}
+
+.order-qty, .order-size {
+  color: #444;
+}
+
+.order-date {
+  font-size: 1rem;
+  color: #888;
+  margin-top: 0.2rem;
+}
+
+.order-status {
+  display: flex;
+  align-items: center;
+  font-size: 1.08rem;
+  color: #047413;
+  font-weight: 500;
+  gap: 0.5rem;
+  min-width: 140px;
+  justify-content: flex-end;
+}
+
+.order-status-dot {
+  width: 10px;
+  height: 10px;
+  background: #047413;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.orders-empty {
+  text-align: center;
+  color: #888;
+  font-size: 1.2rem;
+  margin-top: 4rem;
+}
+
+.order-group {
+  position: relative;
+}
+
+.order-remove-btn {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  background: #fff;
+  color: #e74c3c;
+  border: 1.5px solid #e74c3c;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  z-index: 2;
+}
+
+.order-remove-btn:hover {
+  background: #e74c3c;
+  color: #fff;
+  border: 1.5px solid #e74c3c;
+}
+
+@media (max-width: 700px) {
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .order-img {
+    width: 80px;
+    height: 80px;
+  }
+  .order-status {
+    min-width: 0;
+    justify-content: flex-start;
+  }
+} 
