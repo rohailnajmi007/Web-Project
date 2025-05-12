@@ -2,9 +2,15 @@ import userModel from "../models/userModel.js";
 import validator from "validator";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+
+// Ensure environment variables are loaded
+dotenv.config();
+
+const JWT_SECRET = process.env.JWT_SECRET || "project";
 
 const createToken = (id) => {
-  return jwt.sign({ id }, "project", {
+  return jwt.sign({ id }, JWT_SECRET, {
     expiresIn: "3d",
   });
 };

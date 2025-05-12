@@ -37,6 +37,15 @@ const ShopContextProvider = (props) => {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
   }, [wishlist]);
 
+  // Logout function to clear authentication and navigate to login
+  const logout = () => {
+    setToken("");
+    setUser(null);
+    localStorage.removeItem("token");
+    toast.success("Logged out successfully");
+    navigate("/login");
+  };
+
   const addToCart = async (itemId, size) => {
     let cartData = structuredClone(cartItems);
 
@@ -51,6 +60,28 @@ const ShopContextProvider = (props) => {
       cartData[itemId][size] = 1;
     }
     setCartItems(cartData);
+
+    if (token) {
+      try {
+        const response = await axios.post(
+          backendUrl + "/api/cart/add",
+          { itemId, size },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        if (response.data.success) {
+          toast.success("Item added to cart");
+        } else {
+          toast.error(response.data.message);
+        }
+      } catch (error) {
+        console.error("Error adding to cart", error);
+        toast.error("Error adding to cart");
+      }
+    }
   };
 
   const getCartCount = () => {
@@ -152,6 +183,7 @@ const ShopContextProvider = (props) => {
     backendUrl,
     setToken,
     token,
+    logout,
   };
 
   return (
