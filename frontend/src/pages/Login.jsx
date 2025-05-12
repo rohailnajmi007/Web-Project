@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState , useContext, useEffect} from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
+import { ShopContext } from '../context/ShopContext';
 
 const Login = () => {
   const [name, setName] = useState('');
@@ -8,11 +9,65 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add login logic here
-    navigate('/');
-  };
+
+
+
+  const onSubmitHandler = async (event) => {
+    event.preventDefault();
+    try {
+        if(currentState=== 'Sign Up')
+        {
+          const response = await axios.post(backendUrl + '/api/auth/register',{name,email,password} )
+          if(response.data.success){
+        setToken(response.data.token);
+        localStorage.setItem('token', response.data.token);
+
+
+          }
+          else { toast.error(response.data.message); }
+        }
+
+
+        else {const response = await axios.post(backendUrl + '/api/auth/login',{email,password} )
+        console.log(response.data);
+         if(response.data.success){
+        setToken(response.data.token);
+        localStorage.setItem('token', response.data.token);}
+
+        else { toast.error(response.data.message); }}
+
+
+
+        
+
+
+      
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message);
+
+      
+    }
+
+
+
+    useEffect(() => {
+      
+      if (token) {
+        
+        navigate('/h'); // Redirect to home page
+      }
+    }, [Token]);
+
+
+    useEffect(() => {
+      if (!token && localStorage.getItem('token')){
+        setToken(localStorage.getItem('token'));
+
+        }
+        
+      
+
 
   return (
     <div className="login-bg" style={{ minHeight: '100vh', background: '#f6f9fb', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
