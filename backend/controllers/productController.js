@@ -43,14 +43,13 @@ const addProduct = async (req, res) => {
         return result.secure_url;
       })
     );
-
     const productData = {
       name,
       description,
       category,
       price: Number(price),
       subCategory,
-      bestseller: bestseller === "true" ? true : false,
+      bestseller: bestseller === "true" || bestseller === "on" ? true : false,
       sizes: JSON.parse(sizes),
       image: imagesUrl,
       date: Date.now(),

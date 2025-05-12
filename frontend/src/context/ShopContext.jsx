@@ -8,11 +8,11 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
   const currency = "$";
   const delivery_fee = 10;
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  const backendUrl = "http://localhost:4000";
 
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
-  const [token,setToken] = useState("")
+  const [token, setToken] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCartItems] = useState(() => {
     const stored = localStorage.getItem("cartItems");
@@ -105,27 +105,19 @@ const ShopContextProvider = (props) => {
     setWishlist(wishlist.filter((id) => id !== itemId));
   };
 
-
-
   const getProductsData = async () => {
-
-  try{
-
-    const response = await axios.get(backendUrl + "/api/product/list");
-    if(response.data.success){
-      setProducts(response.data.products);
+    try {
+      const response = await axios.get(backendUrl + "/api/product/list");
+      if (response.data.success) {
+        setProducts(response.data.products);
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch {
+      console.error("Error fetching products data");
+      toast.error("Error fetching products data");
     }
-    else{
-      toast.error(response.data.message);
-    }
-
-  }
-
-  catch{
-    console.error("Error fetching products data");
-    toast.error("Error fetching products data");
-  }
-}
+  };
 
   useEffect(() => {
     getProductsData();
@@ -157,13 +149,13 @@ const ShopContextProvider = (props) => {
     error,
     setError,
     navigate,
-    backendUrl, setToken, token
+    backendUrl,
+    setToken,
+    token,
   };
 
   return (
-    <ShopContext.Provider value={value}>
-      {props.children}
-    </ShopContext.Provider>
+    <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>
   );
 };
 

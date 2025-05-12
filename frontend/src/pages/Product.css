@@ -100,8 +100,9 @@
 }
 
 .size-button.active {
-  border-color: #ff6b00;
-  background-color: #fff;
+  border-color: black;
+  background-color: rgb(240, 189, 198);
+  color: rgb(36, 33, 33);
 }
 
 .add-to-cart {

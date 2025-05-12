@@ -1,29 +1,22 @@
 import jwt from "jsonwebtoken";
 
 const adminAuth = async (req, res, next) => {
-
-    try {
-        const {token} = req.headers
-        if (!token) {
-            return res.json({superAdmin: false, message: "Login again."})
-        }
-
-        const token_decode = jwt.verify(token, process.env.JWT_SECRET) 
-
-        if (token_decode !== process.env.ADMIN_EMAIL + process.env.ADMIN_PASSWORD) {
-            return res.json({superAdmin: false, message: "Login again."})
-
-        }
-
-        next()
-
-
-        
-    } catch (error) {
-        console.log(error)
-        res.json({success: false, message: error.message})
-        
+  try {
+    const { token } = req.headers;
+    if (!token) {
+      return res.json({ superAdmin: false, message: "Login again." });
     }
-}
+    const token_decode = jwt.verify(token, "project");
 
-export default adminAuth
+    if (token_decode !== "admin@forever.com" + "qwerty123") {
+      return res.json({ superAdmin: false, message: "Login again." });
+    }
+
+    next();
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
+export default adminAuth;
