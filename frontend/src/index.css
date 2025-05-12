@@ -1,13 +1,48 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Your custom styles below */
 
+:root {
+  --primary-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --heading-color: #1a1a1a;
+  --body-color: #333333;
+  --muted-color: #666666;
+  --accent-color: #ff6b00;
+  --border-color: #e5e7eb;
+  --transition-base: all 0.2s ease-in-out;
+}
+
 body,
 html {
   background-color: white;
+  font-family: var(--primary-font);
+  color: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: #e65c00;
 }
 
 a.active hr {
@@ -15,7 +50,7 @@ a.active hr {
 }
 
 #root {
-  font-family: "Inter", sans-serif;
+  font-family: var(--primary-font);
   font-optical-sizing: auto;
   font-style: normal;
   background-color: white;

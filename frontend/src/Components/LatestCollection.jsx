@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const Title = ({ text1, text2 }) => (
     <div className="title-container">
         <h2>{text1} {text2}</h2>
-        <p className="subtitle">All of the niggas fighting the 100 men vs 1 Gorilla will be wearing
-            our shirts. 
+        <p className="subtitle">
+            Discover the latest and most fashionable products from our collection.
         </p>
     </div>
 );

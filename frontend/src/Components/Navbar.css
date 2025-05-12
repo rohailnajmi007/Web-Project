@@ -20,7 +20,7 @@
 }
 
 .logo-image {
-    height: 24px;
+    height: 32px;
     width: auto;
     object-fit: contain;
 }
@@ -215,7 +215,7 @@
     }
 
     .logo-image {
-        height: 20px;
+        height: 28px;
     }
 
     .mobile-menu-btn {
@@ -314,7 +314,7 @@
     }
 
     .logo-image {
-        height: 18px;
+        height: 24px;
     }
 
     .flex {
