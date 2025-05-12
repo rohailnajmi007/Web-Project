@@ -6,7 +6,7 @@
   max-width: 1200px;
   margin: 4rem auto 0 auto;
   padding: 2rem 1rem 4rem 1rem;
-  background: transparent;
+  background-color: white;
 }
 
 .about-img-col {
@@ -36,7 +36,7 @@
 
 .about-title {
   font-size: 2rem;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   font-weight: 400;
   color: #888;
   margin-bottom: 2.5rem;
@@ -70,7 +70,7 @@
   font-size: 1.13rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
 @media (max-width: 900px) {
@@ -79,7 +79,8 @@
     gap: 2.5rem;
     padding: 1.5rem 0.5rem 3rem 0.5rem;
   }
-  .about-img-col, .about-content-col {
+  .about-img-col,
+  .about-content-col {
     min-width: 0;
     width: 100%;
   }
@@ -104,7 +105,7 @@
 
 .why-choose-title {
   font-size: 1.25rem;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   font-weight: 400;
   color: #888;
   margin-bottom: 2.2rem;
@@ -152,13 +153,13 @@
   color: #222;
   font-size: 1.08rem;
   margin-bottom: 0.7rem;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
 .why-choose-card-desc {
   color: #444;
   font-size: 1.01rem;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   line-height: 1.6;
 }
 
@@ -179,7 +180,7 @@
   color: #222;
   margin-bottom: 0.7rem;
   margin-top: 2.2rem;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
 .newsletter-section {
@@ -194,14 +195,14 @@
   font-weight: 600;
   color: #222;
   margin-bottom: 0.5rem;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
 .newsletter-desc {
   color: #888;
   font-size: 1.08rem;
   margin-bottom: 2rem;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
 .newsletter-form {
@@ -222,7 +223,7 @@
   background: #fff;
   color: #222;
   outline: none;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   border-right: none;
 }
 
@@ -235,7 +236,7 @@
   font-weight: 600;
   padding: 1.1rem 2.2rem;
   cursor: pointer;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   letter-spacing: 0.01em;
   transition: background 0.2s;
 }
@@ -249,7 +250,7 @@
   font-size: 1rem;
   margin-top: 0.7rem;
   font-weight: 500;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
 @media (max-width: 600px) {
@@ -260,7 +261,8 @@
     flex-direction: column;
     gap: 0.5rem;
   }
-  .newsletter-btn, .newsletter-input {
+  .newsletter-btn,
+  .newsletter-input {
     width: 100%;
     font-size: 0.98rem;
     border-radius: 0;
@@ -268,4 +270,4 @@
   .newsletter-input {
     border-right: 1px solid #e0e0e0;
   }
-} 
+}

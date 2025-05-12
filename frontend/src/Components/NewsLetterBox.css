@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .newsletterbox-container {
   max-width: 500px;
   margin: 3rem auto;
   padding: 2.5rem 2rem;
-  background: #fff;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletterbox-title {
@@ -16,14 +16,14 @@
   font-weight: 600;
   color: #222;
   margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletterbox-desc {
   color: #666;
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletterbox-form {
@@ -32,7 +32,7 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletterbox-input {
@@ -43,7 +43,7 @@
   font-size: 1rem;
   outline: none;
   transition: border 0.2s;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletterbox-input:focus {
@@ -60,7 +60,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletterbox-btn:hover {
@@ -72,7 +72,7 @@
   font-size: 1rem;
   margin-top: 0.5rem;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 600px) {
@@ -83,8 +83,9 @@
     flex-direction: column;
     gap: 0.5rem;
   }
-  .newsletterbox-btn, .newsletterbox-input {
+  .newsletterbox-btn,
+  .newsletterbox-input {
     width: 100%;
     font-size: 0.95rem;
   }
-} 
+}

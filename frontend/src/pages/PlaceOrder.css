@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 .placeorder-container {
   display: flex;
@@ -8,7 +8,8 @@
   max-width: 1200px;
   margin: 4rem auto 0 auto;
   padding: 2rem 1rem 4rem 1rem;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background-color: white;
 }
 
 .placeorder-left {
@@ -66,7 +67,7 @@
 
 .placeorder-form input:focus {
   border: 1.5px solid #ff6b00;
-  box-shadow: 0 2px 8px rgba(255,107,0,0.07);
+  box-shadow: 0 2px 8px rgba(255, 107, 0, 0.07);
 }
 
 .placeorder-right {
@@ -92,7 +93,7 @@
   margin-top: 2.5rem;
   background: #fff;
   border: 1.5px solid #f2f2f2;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 2rem 2.2rem 2.2rem 2.2rem;
   border-radius: 0;
 }
@@ -181,7 +182,7 @@
 }
 
 .payment-radio.checked::after {
-  content: '';
+  content: "";
   display: block;
   width: 8px;
   height: 8px;
@@ -234,4 +235,4 @@
     width: 100%;
     justify-content: flex-start;
   }
-} 
+}

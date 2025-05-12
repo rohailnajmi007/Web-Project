@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: white;
 }
 
 #root {
@@ -17,6 +19,7 @@ html, body {
   padding: 0;
   min-height: 100vh;
   position: relative;
+  background-color: white;
 }
 
 /* Remove any conflicting logo styles */
@@ -55,4 +58,3 @@ html, body {
 .read-the-docs {
   color: #888;
 }
-
